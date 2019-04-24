@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.util.Scanner;
 
-public class Final_Java_Project {
+class Final_Java_Project {
 
 	public static void main(String[] args) {
 			Scanner input = new Scanner(System.in);
@@ -98,13 +92,16 @@ public class Final_Java_Project {
 			
 			if (hi >= 5 ){
 				System.out.println("You have failed the game, try again"); 
+				System.exit(0);
 			}
 			else if (med >= 7){
 				System.out.println("You have failed the game, try again");
+				System.exit(0);			
 			}
 			
 			else if (score >= 1500){
 				System.out.println("You have risked your way through the game, congradulations");
+				System.exit(0);				
 			}
 			else {
 				System.out.println(" ");
@@ -154,9 +151,11 @@ public class Final_Java_Project {
 			
 			if (hi >= 5 ){
 				System.out.println("You have failed the game, try again"); 
+				System.exit(0);			
 			}
 			else if (med >= 7){
 				System.out.println("You have failed the game, try again");
+				System.exit(0);
 			}
 			else if (score >= 1500){
 				System.out.println("You have risked your way through the game, congradulations");
@@ -209,9 +208,11 @@ public class Final_Java_Project {
 			
 			if (hi >= 5 ){
 				System.out.println("You have failed the game, try again"); 
+				System.exit(0);			
 			}
 			else if (med >= 7){
 				System.out.println("You have failed the game, try again");
+				System.exit(0);
 			}
 			else if (score >= 1500){
 				System.out.println("You have risked your way through the game, congradulations");
