@@ -13,14 +13,18 @@ class final_proj {
 		Scanner input = new Scanner(System.in);
 		int[] riskInt = new int[3];
 		String[] risk = new String[3];
+		
+		//Random
 		Random rand = new Random();
 		
-		
+		//Player Stats
+		int health = 100
+		int stamina = 10
+		int money = 10
 		
 		// Get 3 random risk factors
 		for (int i = 0; i <= 2; i++) {
 			riskInt[i] = rand.nextInt(100) + 1;
-			System.out.println(riskInt[i]); 
 			if (riskInt[i] >= 0 && riskInt[i] <= 33) {
 				risk[i] = "Low ";
 			}
@@ -30,12 +34,10 @@ class final_proj {
 			if (riskInt[i] >= 67 && riskInt[i] <= 100) {
 				risk[i] = "High";
 			}
-			System.out.println(risk[i]);
 		}
-	}
-	
-	// Displays the 3 door types, based off of input from main method, and asks player to choose a door, returns door properties.
-	public static void doorMain(String[] args) {
 		
+		System.out.printf(" ___________________________________________ ");
+		System.out.printf("| Money:       Stamina:       Health:       |");
+		System.out.printf("| Items:                                    |");
 	}
 }
