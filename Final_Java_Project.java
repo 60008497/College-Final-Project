@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 class Final_Java_Project {
 
@@ -10,12 +11,44 @@ class Final_Java_Project {
 			int hi = 0;
 			int choice = 0;
 //___________________________________________________________________________________________________________________________________________________________________________________________
-			//Question number 1
+			//_______________________________________________________________________________________________________________
+				String Problem1 = "You are left home alone what do you do?"; 				
 				String Low1 = "Stay up past bed time";
 				String Med1 = "Sneak out to go party";
 				String Hi1 ="Steal some of your parents alcohol";
-			  
-			System.out.println("                                               You are left home alone what do you choose to do? ");
+			//_______________________________________________________________________________________________________________
+				String Problem2 = "You recieved an F on a test, what do you do?";
+				String Low2 = "Show your parents your report card";
+				String Med2 = "Hide your report card";
+				String Hi2 ="Bribe your teacher";
+			//_______________________________________________________________________________________________________________
+				String Problem3 = "You are given the cheat sheet for a test, what do you do?";
+				String Low3 = "Throw it away and tell the teacher";
+				String Med3 = "Use it to get a good score on the test";
+				String Hi3 ="You duplicate it for everyone";
+			//_______________________________________________________________________________________________________________
+				String Problem4 = " You are given the cheat sheet for a test, what do you do? ";
+				String Low4 = "Throw it away and tell the teacher";
+				String Med4 = "Use it to get a good score on the test";
+				String Hi4 ="You duplicate it for everyone";
+			//_______________________________________________________________________________________________________________
+				String Problem5 = "You see a man drop his wallet on the street, what do you do? ";
+				String Low5 = "Pick it up and run it to him";
+				String Med5 = "Open it and steal a $20 bill";
+				String Hi5 ="Steal the whole wallet";
+			//_______________________________________________________________________________________________________________
+				String Problem6 = "You are recieve a package in the mail that was delievered to the wrong address, what do you do?";
+				String Low6 = "Return it to the post office";
+				String Med6 = "Keep it without telling anyone";
+				String Hi6 ="Open it and keep whatever is inside";
+			//_______________________________________________________________________________________________________________
+				String Problem7 = "You see a coworker steal some money from the register, what do you do? ";
+				String Low7 = "Tell your manager immediately";
+				String Med7 = "Don't say anything";
+				String Hi7 ="Steal some money too";
+			//_______________________________________________________________________________________________________________
+											
+			System.out.println("                                               " + Problem1 +" ");
 			System.out.println("______________________________________________________________________________________________________________________________________________");
 			System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 			System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
@@ -55,11 +88,9 @@ class Final_Java_Project {
 //________________________________________________________________________________________________________________________________________________________________________________
 			//Question number 2
 			
-				String Low2 = "Show your parents your report card";
-				String Med2 = "Hide your report card";
-				String Hi2 ="Bribe your teacher";
+				
 			  
-			System.out.println("                                               You recieved an F on a test? ");
+			System.out.println("                                              " + Problem2 + "  ");
 			System.out.println("______________________________________________________________________________________________________________________________________________");
 			System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 			System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
@@ -115,11 +146,9 @@ class Final_Java_Project {
 //________________________________________________________________________________________________________________________________________________________________________________
 			//Question number 3
 			
-				String Low3 = "Throw it away and tell the teacher";
-				String Med3 = "Use it to get a good score on the test";
-				String Hi3 ="You duplicate it for everyone";
+				
 			  
-			System.out.println("                                               You are given the cheat sheet for a test, what do you do? ");
+			System.out.println("                                              " + Problem3 + "  ");
 			System.out.println("______________________________________________________________________________________________________________________________________________");
 			System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 			System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
@@ -151,14 +180,16 @@ class Final_Java_Project {
 			
 			if (hi >= 5 ){
 				System.out.println("You have failed the game, try again"); 
-				System.exit(0);			
+				System.exit(0);
 			}
 			else if (med >= 7){
 				System.out.println("You have failed the game, try again");
-				System.exit(0);
+				System.exit(0);			
 			}
+			
 			else if (score >= 1500){
 				System.out.println("You have risked your way through the game, congradulations");
+				System.exit(0);				
 			}
 			else {
 				System.out.println(" ");
@@ -172,11 +203,9 @@ class Final_Java_Project {
 //________________________________________________________________________________________________________________________________________________________________________________________
 			//Question number 4
 
-				String Low4 = "Throw it away and tell the teacher";
-				String Med4 = "Use it to get a good score on the test";
-				String Hi4 ="You duplicate it for everyone";
+				
 			  
-			System.out.println("                                               You are given the cheat sheet for a test, what do you do? ");
+			System.out.println("                                              " + Problem4 + " ");
 			System.out.println("______________________________________________________________________________________________________________________________________________");
 			System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 			System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
@@ -208,38 +237,36 @@ class Final_Java_Project {
 			
 			if (hi >= 5 ){
 				System.out.println("You have failed the game, try again"); 
-				System.exit(0);			
+				System.exit(0);
 			}
 			else if (med >= 7){
 				System.out.println("You have failed the game, try again");
-				System.exit(0);
+				System.exit(0);			
 			}
+			
 			else if (score >= 1500){
 				System.out.println("You have risked your way through the game, congradulations");
+				System.exit(0);				
 			}
 			else {
 				System.out.println(" ");
 			}
-			
 			System.out.println("Your current score is " + score);
 			System.out.println("You have chose " + low + " Low risks");
 			System.out.println("You have chose " + med + " Medium risks");
 			System.out.println("You have chose " + hi + " High risks");
-
 			System.out.println("_______________________________________________________________________________________________________________________________________________");
 //__________________________________________________________________________________________________________________________________________________________________________________
 		//Question number 5
 			
-			String Low5 = "Pick it up and run it to him";
-			String Med5 = "Open it and steal a $20 bill";
-			String Hi5 ="Steal the whole wallet";
+			
 		  
-		System.out.println("                                         You see a man drop his wallet on the street, what do you do?  ");
+		System.out.println("                                          " + Problem5 + " ");
 		System.out.println("______________________________________________________________________________________________________________________________________________");
 		System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 		System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
 		System.out.println("|                                              |                                               |                                             |");
-		System.out.println("|    "+ Low5 +"              |             "+Med5 +"      |        "+ Hi5 +"               |");
+		System.out.println("|    "+ Low5 +"              |             "+ Med5 +"      |        "+ Hi5 +"               |");
 		System.out.println("|                                              |                                               |                                             |");
 		System.out.println("|______________________________________________|_______________________________________________|_____________________________________________|");
 		
@@ -267,31 +294,31 @@ class Final_Java_Project {
 		
 		if (hi >= 5 ){
 			System.out.println("You have failed the game, try again"); 
+			System.exit(0);
 		}
 		else if (med >= 7){
 			System.out.println("You have failed the game, try again");
+			System.exit(0);			
 		}
 		
 		else if (score >= 1500){
 			System.out.println("You have risked your way through the game, congradulations");
+			System.exit(0);				
 		}
 		else {
 			System.out.println(" ");
-			System.out.println("Your current score is " + score);
-			System.out.println("You have chose " + low + " Low risks");
-			System.out.println("You have chose " + med + " Medium risks");
-			System.out.println("You have chose " + hi + " High risks");
-	
-			}
+		}
+		System.out.println("Your current score is " + score);
+		System.out.println("You have chose " + low + " Low risks");
+		System.out.println("You have chose " + med + " Medium risks");
+		System.out.println("You have chose " + hi + " High risks");
 		System.out.println("_______________________________________________________________________________________________________________________________________________");
 //_________________________________________________________________________________________________________________________________________________________________________________
 			//Question number 6
 
-				String Low6 = "Return it to the post office";
-				String Med6 = "Keep it without telling anyone";
-				String Hi6 ="Open it and keep whatever is inside";
+				
 			  
-			System.out.println("                     You are recieve a package in the mail that was delievered to the wrong address, what do you do?  ");
+			System.out.println("                       " + Problem6 + " ");
 			System.out.println("______________________________________________________________________________________________________________________________________________");
 			System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 			System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
@@ -324,31 +351,30 @@ class Final_Java_Project {
 			
 			if (hi >= 5 ){
 				System.out.println("You have failed the game, try again"); 
+				System.exit(0);
 			}
 			else if (med >= 7){
 				System.out.println("You have failed the game, try again");
+				System.exit(0);			
 			}
 			
 			else if (score >= 1500){
 				System.out.println("You have risked your way through the game, congradulations");
+				System.exit(0);				
 			}
 			else {
 				System.out.println(" ");
-				System.out.println("Your current score is " + score);
-				System.out.println("You have chose " + low + " Low risks");
-				System.out.println("You have chose " + med + " Medium risks");
-				System.out.println("You have chose " + hi + " High risks");
-
-				}
-		System.out.println("_______________________________________________________________________________________________________________________________________________");	
+			}
+			System.out.println("Your current score is " + score);
+			System.out.println("You have chose " + low + " Low risks");
+			System.out.println("You have chose " + med + " Medium risks");
+			System.out.println("You have chose " + hi + " High risks");System.out.println("_______________________________________________________________________________________________________________________________________________");	
 //_____________________________________________________________________________________________________________________________________________________________________________
 		//Question number 7
 
-			String Low7 = "Tell your manager immediately";
-			String Med7 = "Don't say anything";
-			String Hi7 ="Steal some money too";
+			
 		  
-		System.out.println("                                 You see a coworker steal some money from the register, what do you do?  ");
+		System.out.println("                                 " + Problem7 + " ");
 		System.out.println("______________________________________________________________________________________________________________________________________________");
 		System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 		System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
@@ -381,23 +407,24 @@ class Final_Java_Project {
 		
 		if (hi >= 5 ){
 			System.out.println("You have failed the game, try again"); 
+			System.exit(0);
 		}
 		else if (med >= 7){
 			System.out.println("You have failed the game, try again");
+			System.exit(0);			
 		}
 		
 		else if (score >= 1500){
 			System.out.println("You have risked your way through the game, congradulations");
+			System.exit(0);				
 		}
 		else {
 			System.out.println(" ");
-			System.out.println("Your current score is " + score);
-			System.out.println("You have chose " + low + " Low risks");
-			System.out.println("You have chose " + med + " Medium risks");
-			System.out.println("You have chose " + hi + " High risks");
-
-			}
-	System.out.println("_______________________________________________________________________________________________________________________________________________");
+		}
+		System.out.println("Your current score is " + score);
+		System.out.println("You have chose " + low + " Low risks");
+		System.out.println("You have chose " + med + " Medium risks");
+		System.out.println("You have chose " + hi + " High risks");System.out.println("_______________________________________________________________________________________________________________________________________________");
 
 
 
