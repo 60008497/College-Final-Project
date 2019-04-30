@@ -11,6 +11,7 @@ class Final_Java_Project {
 			int hi = 0;
 			int choice = 0;
 //___________________________________________________________________________________________________________________________________________________________________________________________
+			
 			//_______________________________________________________________________________________________________________
 				String Problem1 = "You are left home alone what do you do?"; 				
 				String Low1 = "Stay up past bed time";
@@ -47,6 +48,70 @@ class Final_Java_Project {
 				String Med7 = "Don't say anything";
 				String Hi7 ="Steal some money too";
 			//_______________________________________________________________________________________________________________
+				String Problem9 = "You are offered to try drugs, what do you do?";
+				String Low9 = "Say no and tell the police";
+				String Med9 = "Just say no";
+				String High9 = "Go for it, you only live once";
+			//_______________________________________________________________________________________________________________							
+				String Problem10 = "You are walking down the street and see a person getting mugged, what do you do?";
+				String Low10 = "Run to help them while calling 911";
+				String Med10 = "Call 911 and walk away";
+				String High10 = "Ignore it and get on with your day";
+			//_______________________________________________________________________________________________________________	
+				String Problem11 = "You see a homeless person on the side of the street, what do you do?";
+				String Low11 = "Buy them some food and some warm clothes";
+				String Med11 = "Dig some change out of your pocket";
+				String High11 = "Walk away and kick dust at them";
+			//_______________________________________________________________________________________________________________							
+				String Problem12 = "While walking home you see a stray dog with a collar tag, what do you do?";
+				String Low12 = "Look at the collar and call the number";
+				String Med12 = "Take the dog to the dog shelter";
+				String High12 = "Steal the dog and take it home";
+			//_______________________________________________________________________________________________________________								
+				String Problem13 = "You are at the store and see someone knock over the whole shelf, what do you do?";
+				String Low13 = "Go pick it up quietly";
+				String Med13 = "Tell and employee";
+				String High13 = "Yell at the person who knocked it over";
+			//_______________________________________________________________________________________________________________								
+				String Problem14 = "The neighbors garbage can fell over and trash spilled everywhere, what do you do?";
+				String Low14 = "Pick it up and take it to the landfill";
+				String Med14 = "Put it all back in the trashcan";
+				String High14 = "Take it and spread the trash everywhere";
+			//_______________________________________________________________________________________________________________								
+				String Problem15 = "The bank teller gives you 5 $100 bills instead of 5 $10 bills, what do you do?";
+				String Low15 = "Correct their mistake and take the loss";
+				String Med15 = "Take the money";
+				String High15 = "Take the money and get the teller fired";
+			//_______________________________________________________________________________________________________________								
+				String Problem16 = "The car in front of you catches on fire and pulls off the road, what do you do?";
+				String Low16 = "Stop your car and try to put the fire out";
+				String Med16 = "Get all the people out, but leave the car";
+				String High16 = "Drive past them without stopping";
+			//_______________________________________________________________________________________________________________								
+				String Problem17 = "You see a hitchhiker walking down the side of the freeway, what do you do?";
+				String Low17 = "Pick them up and drop take them somewhere";
+				String Med17 = "Leave them on the side of the road";
+				String High17 = "Drive past them and spit on them";
+			//_______________________________________________________________________________________________________________								
+				String Problem18 = "You are offered a shot of vodka, what do you do?";
+				String Low18 = "Say no and go home";
+				String Med18 = "Try a little bit of it";
+				String High18 = "How about 5 more shots";
+			//_______________________________________________________________________________________________________________								
+				String Problem19 = "You work at a vallet service and a nice car pulls up, what do you do?";
+				String Low19 = "Drive it to a parking spot and let it be";
+				String Med19 = "Take it on a joyride around the block";
+				String High19 = "Go pick up your friends and have a party";
+			//_______________________________________________________________________________________________________________								
+				String Problem20 = "You see a wounded cat on the road, what do you do?";
+				String Low20 = "Pick it up and take it to the hospital";
+				String Med20 = "Move it to the side of the road";
+				String High20 = "Leave it in the middle of the road";
+			//_______________________________________________________________________________________________________________								
+										
+											
+											
+											
 											
 			System.out.println("                                               " + Problem1 +" ");
 			System.out.println("______________________________________________________________________________________________________________________________________________");
