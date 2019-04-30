@@ -23,10 +23,15 @@ class final_proj {
 		int stamina = 10;
 		int money = 10;
 		
-		//The loop of the program!
+		// Special Items
+		int percent_reader = 0;
+		int always_good = 0;
+		int blind_eye = 0;
+		
+		//_______________The loop of the program!_______________
 		while (health > 0 && stamina > 0) {
 			
-			// Get 3 random risk factors
+			//_______________Get 3 random risk factors_______________
 			for (int i = 0; i <= 2; i++) {
 				riskInt[i] = rand.nextInt(100) + 1;
 				if (riskInt[i] >= 0 && riskInt[i] <= 33) {
@@ -40,16 +45,46 @@ class final_proj {
 				}
 			}
 			
-			//Clear, then basic displays.
-			for (int n = 0; n <= 100; n++) {
-				System.out.printf("\n");
+			//_______________Loop this while playerInput is over 3 or under 1_______________
+			while (playerInput >= 4 || playerInput <= 0) {
+				//________________Clear, then basic displays._______________
+				for (int n = 0; n <= 100; n++) {
+					System.out.printf("\n");
+				}
+				System.out.print(" ___________________________________________ \n");
+				System.out.print("| Money:" + String.format("%1$6s", money) + "$  Stamina: " + String.format("%1$3s", stamina) + "   Health: " + String.format("%1$3s", health) + " |\n");
+				System.out.print("|                                           |\n");
+				
+				//_______________Print Doors, Items Can Change Display, Ask for Player Input._______________
+				if (blind_eye == 0) {
+					System.out.print("|                                           |\n");
+				}
+				if (blind_eye >= 1) {
+					System.out.print("|   !-You Are Blinded-!                     |\n");
+				}
+				
+				for (int i = 0; i <= 2; i++) {
+					if (blind_eye >= 1) {
+						System.out.print("| Door " + (i+1) + "= Unknown                           |\n");
+					}
+					else if (percent_reader >= 1) {
+						System.out.print("| Door " + (i+1) + "= " + String.format("%1$3s", riskInt[i]) + "% chance for bad outcome.      |\n");
+					}
+					else {
+						System.out.print("| Door " + (i+1) + "= " + String.format("%1$4s", risk[i]) + "                              |\n");
+					}
+				}
+				System.out.print("|                                           |\n");
+				System.out.print("| Use 1, 2, or 3 to choose a door.          |\n");
+				System.out.print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ \n");
+				//Player Input
+				playerInput = input.nextInt();
 			}
-			System.out.print("\n ___________________________________________ ");
-			System.out.print("\n| Money: " + String.format("%1$5s", money) + " Stamina: " + String.format("%1$5s", stamina) + " Health: " + String.format("%1$5s", health) + " |");
-			System.out.print("\n|                                           |");
 			
+			
+			
+			//End Loop (For Debugging)
 			health = 0;
-			// stamina = 0;
 		}
 	}
 }
