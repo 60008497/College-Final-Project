@@ -15,8 +15,47 @@ class final_proj {
 		int[] riskInt = new int[3];
 		String[] risk = new String[3];
 		
+		String[][] goodOutcome = new String[5][5];
+		String[][] badOutcome = new String[5][5];
+		
+		
+		////  #  _____  #  -----  #          OUTCOMES          #  -----  #  _____  #  ////
+		
+		// Bad health drain 1
+		// Bad health drain 2
+		// Good 50/50 health
+		// Good health gain 1
+		// Good health gain 2
+		// Bad stamina drain 1
+		// Bad stamina drain 2
+		// Good 50/50 stamina
+		// Good stamina gain 1
+		// Good stamina gain 2
+		// Bad money drain 1
+		// Bad money drain 2
+		// Good 50/50 money
+		// Good money gain 1
+		// Good money gain 2
+		// Good Stamina for Health
+		// Good Stamina for Money
+		// Good Health for Money
+		// Good Health for Stamina
+		// Good Money for Health
+		// Good Money for Stamina
+		
+		//End Score properties:
+		int choices = 0;
+		int badChoices = 0;
+		int goodChoices = 0;
+		int purchases = 0;
+		int enemiesBattled = 0;
+		
 		//Random
 		Random rand = new Random();
+		int good_or_bad = 0;
+		
+		//ShopStuff: 1= Health 2= Stamina 3= Extra Door 4= Percent Reader 5= Always Good 6= Blindness
+		int[] shopStuff = new int[3];
 		
 		//Player Stats
 		int health = 100;
@@ -47,12 +86,13 @@ class final_proj {
 			
 			//_______________Loop this while playerInput is over 3 or under 1_______________
 			while (playerInput >= 4 || playerInput <= 0) {
+				
 				//________________Clear, then basic displays._______________
 				for (int n = 0; n <= 100; n++) {
 					System.out.printf("\n");
 				}
 				System.out.print(" ___________________________________________ \n");
-				System.out.print("| Money:" + String.format("%1$6s", money) + "$  Stamina: " + String.format("%1$3s", stamina) + "   Health: " + String.format("%1$3s", health) + " |\n");
+				System.out.print("| Money:" + String.format("%6s", money) + "$  Stamina: " + String.format("%3s", stamina) + "   Health: " + String.format("%3s", health) + " |\n");
 				System.out.print("|                                           |\n");
 				
 				//_______________Print Doors, Items Can Change Display, Ask for Player Input._______________
@@ -80,9 +120,9 @@ class final_proj {
 				//Player Input
 				playerInput = input.nextInt();
 			}
+			playerInput--;
 			
-			
-			
+						
 			//End Loop (For Debugging)
 			health = 0;
 		}
