@@ -7,4 +7,4 @@ The story mode is the only code that is currently working and able to run
 
 Contributors: Chloee Stephenson, Kolby Spring
 
-![alt text] (Code.png)
+![alt text] (screenshots/Code.png "this is the output")
