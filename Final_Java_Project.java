@@ -4,12 +4,15 @@ class Final_Java_Project {
 
 	public static void main(String[] args) {
 			Scanner input = new Scanner(System.in);
+		
+		//These are the variables in which all of the data will be stored
 			int score = 0;
 			int low = 0;
 			int med = 0;
 			int hi = 0;
 			int choice = 0;
-
+		
+		//This is the 2D Array used to conduct the scenerio, low risk, medium risk and high risk
 			String[][] problems = {{"You are left home alone what do you do?", "Stay up past bed time", "Sneak out to go party", "Steal some of your parents alcohol"},
 						{"You recieved an F on a test, what do you do?","Show your parents your report card", "Hide your report card", "Bribe your teacher"},
 						{"You are given the cheat sheet for a test, what do you do?", "Throw it away and tell the teacher","Use it to get a good score on the test", "You duplicate it for everyone"},
@@ -32,7 +35,7 @@ class Final_Java_Project {
 						{"You see a wounded cat on the road, what do you do?","Pick it up and take it to the hospital", "Move it to the side of the road","Leave it in the middle of the road"}};
 
 													
-		
+		//This is the user interface in which the 2D array will be displayed
 		for (int i = 0; i < problems.length; i++) {								
 			System.out.println("                                               " + problems[i][0] +" ");
 			System.out.println("______________________________________________________________________________________________________________________________________________");
@@ -46,10 +49,13 @@ class Final_Java_Project {
 			System.out.println("|______________________________________________|_______________________________________________|_____________________________________________|");
 			
 			System.out.println("");
+			
+			//User gets to choose which risk they would like
 			System.out.println("Type 1 for Low Risk, Type 2 for Medium Risk and Type 3 for High Risk:");
 			
 			choice = input.nextInt();
 			
+			//This decides what the users score will be after the select an option
 			if (choice == 1) {
 				score += 100;
 				low += 1;
@@ -66,6 +72,7 @@ class Final_Java_Project {
 				System.out.println("Not a Valid Option");
 			}
 			
+			//This decides if they will keep playing or if they have lost the game
 			if (hi >= 7 ){
 				System.out.println("You have failed the game, try again"); 
 				System.exit(0);
@@ -82,6 +89,8 @@ class Final_Java_Project {
 			else {
 				System.out.println(" ");
 			}
+			
+			//This displays the score and the number of each risk they player has chosen
 			System.out.println("Your current score is " + score);
 			System.out.println("You have chose " + low + " Low risks");
 			System.out.println("You have chose " + med + " Medium risks");
