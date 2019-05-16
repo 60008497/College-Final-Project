@@ -15,47 +15,32 @@ class final_proj {
 		int[] riskInt = new int[3];
 		String[] risk = new String[3];
 		
-		String[][] goodOutcome = new String[5][5];
-		String[][] badOutcome = new String[5][5];
+		String[][] testOutcomesBad = {{"| You tripped and hurt yourself!             |","health","-5"},
+		{"| You ran into a trap!                      |","health","-10"},
+		{"| You ran down a long hall and was winded!  |","stamina","-1"},
+		{"| You got lost and got tired getting back!  |","stamina","-3"},
+		{"| You dropped some money down a crack!      |","money","-10"},
+		{"| You got mugged for 20 money!              |","money","-20"}}
 		
+		String[][] testOutcomesGood = {{"| You found a bandage!                      |","health","3"},
+		{"| A potion maker healed you!                |","health","5"},
+		{"| You found a medkit and healed yourself!   |","health","10"},
+		{"| You found and ate an energy bar!          |","stamina","1"},
+		{"| You drank an energy drink you found!      |","stamina","3"},
+		{"| You took a power nap on a bed you found!  |","stamina","5"},
+		{"| You found a some coins on the ground!     |","money","3"},
+		{"| You found a pouch of money on a shelf!    |","money","5"},
+		{"| You opened a chest with some money inside!|","money","10"}}
 		
-		////  #  _____  #  -----  #          OUTCOMES          #  -----  #  _____  #  ////
-		
-		// Bad health drain 1
-		// Bad health drain 2
-		// Good 50/50 health
-		// Good health gain 1
-		// Good health gain 2
-		// Bad stamina drain 1
-		// Bad stamina drain 2
-		// Good 50/50 stamina
-		// Good stamina gain 1
-		// Good stamina gain 2
-		// Bad money drain 1
-		// Bad money drain 2
-		// Good 50/50 money
-		// Good money gain 1
-		// Good money gain 2
-		// Good Stamina for Health
-		// Good Stamina for Money
-		// Good Health for Money
-		// Good Health for Stamina
-		// Good Money for Health
-		// Good Money for Stamina
-		
-		//End Score properties:
-		int choices = 0;
+		//String[][] goodOutcome = {{"| You come across a machine that can give  |","| you health for 25 money, a 50/50 chance.  |"}};
+		//String[][] badOutcome = {{}};
+
 		int badChoices = 0;
 		int goodChoices = 0;
-		int purchases = 0;
-		int enemiesBattled = 0;
 		
 		//Random
 		Random rand = new Random();
 		int good_or_bad = 0;
-		
-		//ShopStuff: 1= Health 2= Stamina 3= Extra Door 4= Percent Reader 5= Always Good 6= Blindness
-		int[] shopStuff = new int[3];
 		
 		//Player Stats
 		int health = 100;
@@ -121,10 +106,17 @@ class final_proj {
 				playerInput = input.nextInt();
 			}
 			playerInput--;
+			stamina--;
 			
-						
-			//End Loop (For Debugging)
-			health = 0;
+			if (risk[playerInput] == "Low ") {
+				rand.randint( 0, 1) = 
+			}
+			if (risk[playerInput] == "Med ") {
+				
+			}
+			if (risk[playerInput] == "High") {
+				
+			}
 		}
 	}
 }
