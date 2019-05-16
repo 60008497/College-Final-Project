@@ -6,3 +6,6 @@ This software is built with multiple variables, a scanner and a 2 dimensional st
 The story mode is the only code that is currently working and able to run
 
 Contributors: Chloee Stephenson, Kolby Spring
+
+![Code](/Desktop/Code.png)
+Format: ![Alt Text](url)
