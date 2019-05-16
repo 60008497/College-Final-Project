@@ -39,7 +39,9 @@ class Final_Java_Project {
 			System.out.println("|                  Low Risk                    |                   Medium Risk                 |                 High Risk                   |");
 			System.out.println("|----------------------------------------------|-----------------------------------------------|---------------------------------------------|");
 			System.out.println("|                                              |                                               |                                             |");
-			System.out.println(String.format("|%1$-46s|%1$-47s|%1$-45s|", "  "+problems[i][1], "  "+problems[i][2], "  "+problems[i][3]));
+			System.out.print(String.format("|%1$-46s", "  "+problems[i][1]));
+			System.out.print(String.format("|%1$-47s", "  "+problems[i][2]));
+			System.out.println(String.format("|%1$-45s|", "  "+problems[i][3]));
 			System.out.println("|                                              |                                               |                                             |");
 			System.out.println("|______________________________________________|_______________________________________________|_____________________________________________|");
 			
