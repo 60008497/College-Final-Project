@@ -52,9 +52,9 @@ class final_proj {
 		int money = 10;
 		
 		// Special Items
-		//int percent_reader = 0;
-		//int always_good = 0;
-		//int blind_eye = 0;
+		int percent_reader = 0;
+		int always_good = 0;
+		int blind_eye = 0;
 		
 		//_______________The loop of the program!_______________
 		while (health > 0 && stamina > 0) {
