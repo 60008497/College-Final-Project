@@ -52,9 +52,9 @@ class final_proj {
 		int money = 10;
 		
 		// Special Items
-		int percent_reader = 0;
-		int always_good = 0;
-		int blind_eye = 0;
+		//int percent_reader = 0;
+		//int always_good = 0;
+		//int blind_eye = 0;
 		
 		//_______________The loop of the program!_______________
 		while (health > 0 && stamina > 0) {
@@ -95,10 +95,10 @@ class final_proj {
 				System.out.print("| Money:" + String.format("%6s", money) + "$  Stamina: " + String.format("%3s", stamina) + "   Health: " + String.format("%3s", health) + " |\n");
 				System.out.print("|                                           |\n");
 				if (borg > 0 && goodOrBad != "null") {
-					if (goodOrBad == "Good") {
+					if (goodOrBad.equals("Good")) {
 						System.out.println(testOutcomesGood[borg][0]);
 					}
-					if (goodOrBad == "Bad") {
+					if (goodOrBad.equals("Bad")) {
 						System.out.println(testOutcomesBad[borg][0]);
 					}
 				} else {
@@ -133,13 +133,13 @@ class final_proj {
 			stamina--;
 			
 //			Figure out which good or bad outcome happens.   <<-----
-			if (risk[playerInput] == "Low ") {
+			if (risk[playerInput].equals("Low ")) {
 				borg = rand.nextInt(1) + 1;
 			}
-			if (risk[playerInput] == "Med ") {
+			if (risk[playerInput].equals("Med ")) {
 				borg = rand.nextInt(2) + 1;
 			}
-			if (risk[playerInput] == "High") {
+			if (risk[playerInput].equals("High")) {
 				borg = rand.nextInt(1) + 2;
 			}
 			
@@ -151,39 +151,44 @@ class final_proj {
 				goodOrBad = "Bad";
 			}
 			
-			if (goodOrBad == "Good") {
+			if (goodOrBad.equals("Good")) {
 				borg = borg * (rand.nextInt(2) + 1);
 			}
 			
-			if (goodOrBad == "Bad") {
+			if (goodOrBad.equals("Bad")) {
 				borg = borg * (rand.nextInt(2)+1);
 			}
 			
 			// Apply new properties!
 			//Good
-			if (goodOrBad == "Good") {
-				if (testOutcomesGood[borg][1] == "health") {
+			if (goodOrBad.equals("Good")) {
+				if (testOutcomesGood[borg][1].equals("health")) {
 					health = health + Integer.parseInt(testOutcomesGood[borg][2]);
 				}
-				if (testOutcomesGood[borg][1] == "stamina") {
+				if (testOutcomesGood[borg][1].equals("stamina")) {
 					stamina = stamina + Integer.parseInt(testOutcomesGood[borg][2]);
 				}
-				if (testOutcomesGood[borg][1] == "money") {
+				if (testOutcomesGood[borg][1].equals("money")) {
 					money = money + Integer.parseInt(testOutcomesGood[borg][2]);
 				}
+				goodChoices++;
 			}
 			//Bad
-			if (goodOrBad == "Bad") {
-				if (testOutcomesBad[borg][1] == "health") {
+			if (goodOrBad.equals("Bad")) {
+				if (testOutcomesBad[borg][1].equals("health")) {
 					health = health - Integer.parseInt(testOutcomesBad[borg][2]);
 				}
-				if (testOutcomesBad[borg][1] == "stamina") {
+				if (testOutcomesBad[borg][1].equals("stamina")) {
 					stamina = stamina - Integer.parseInt(testOutcomesBad[borg][2]);
 				}
-				if (testOutcomesBad[borg][1] == "money") {
+				if (testOutcomesBad[borg][1].equals("money")) {
 					money = money - Integer.parseInt(testOutcomesBad[borg][2]);
 				}
+				badChoices++;
 			}
+			
+			
+			
 			if (money < 0) {
 				money = 0;
 			}
@@ -191,5 +196,9 @@ class final_proj {
 				health = 100;
 			}
 		}
+		for (int n = 0; n <= 100; n++) {
+			System.out.printf("\n");
+		}
+		System.out.print("   ---> Game Over! <---   \n" + "\n  Score:   \n" + "     Good Outcomes: " + goodChoices + "\n     Bad Outcomes: " + badChoices + "\n     Money: " + money + "\n     ----------\n" + "     Final Score: " + (goodChoices+badChoices+money) + "!");
 	}
 }
