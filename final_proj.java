@@ -15,12 +15,12 @@ class final_proj {
 		int[] riskInt = new int[3];
 		String[] risk = new String[3];
 		
-		String[][] testOutcomesBad = {{"| You tripped and hurt yourself!             |","health","-5"},
-		{"| You ran into a trap!                      |","health","-10"},
-		{"| You ran down a long hall and was winded!  |","stamina","-1"},
-		{"| You got lost and got tired getting back!  |","stamina","-3"},
-		{"| You dropped some money down a crack!      |","money","-10"},
-		{"| You got mugged for 20 money!              |","money","-20"}}
+		String[][] testOutcomesBad = {{"| You tripped and hurt yourself!             |","health","5"},
+		{"| You ran into a trap!                      |","health","10"},
+		{"| You ran down a long hall and was winded!  |","stamina","1"},
+		{"| You got lost and got tired getting back!  |","stamina","3"},
+		{"| You dropped some money down a crack!      |","money","10"},
+		{"| You got mugged for 20 money!              |","money","20"}};
 		
 		String[][] testOutcomesGood = {{"| You found a bandage!                      |","health","3"},
 		{"| A potion maker healed you!                |","health","5"},
@@ -30,13 +30,17 @@ class final_proj {
 		{"| You took a power nap on a bed you found!  |","stamina","5"},
 		{"| You found a some coins on the ground!     |","money","3"},
 		{"| You found a pouch of money on a shelf!    |","money","5"},
-		{"| You opened a chest with some money inside!|","money","10"}}
+		{"| You opened a chest with some money inside!|","money","10"}};
 		
 		//String[][] goodOutcome = {{"| You come across a machine that can give  |","| you health for 25 money, a 50/50 chance.  |"}};
 		//String[][] badOutcome = {{}};
-
+		int borg = 0;
 		int badChoices = 0;
 		int goodChoices = 0;
+		
+		//This
+		int randomizer = 0;
+		String goodOrBad = "null";
 		
 		//Random
 		Random rand = new Random();
@@ -55,6 +59,8 @@ class final_proj {
 		//_______________The loop of the program!_______________
 		while (health > 0 && stamina > 0) {
 			
+			playerInput = -1;
+			
 			//_______________Get 3 random risk factors_______________
 			for (int i = 0; i <= 2; i++) {
 				riskInt[i] = rand.nextInt(100) + 1;
@@ -70,15 +76,34 @@ class final_proj {
 			}
 			
 			//_______________Loop this while playerInput is over 3 or under 1_______________
-			while (playerInput >= 4 || playerInput <= 0) {
+			while (playerInput >= 3 || playerInput <= -1) {
+				
 				
 				//________________Clear, then basic displays._______________
 				for (int n = 0; n <= 100; n++) {
 					System.out.printf("\n");
 				}
+				/*if (goodOrBad == "Bad") {
+					System.out.println(testOutcomesBad[borg][1] + " - " + testOutcomesBad[borg][2]);
+				}
+				if (goodOrBad == "Good") {
+					System.out.println(testOutcomesGood[borg][1] + " + " + testOutcomesGood[borg][2]);
+				}*/
+				
+				//System.out.println(borg);
 				System.out.print(" ___________________________________________ \n");
 				System.out.print("| Money:" + String.format("%6s", money) + "$  Stamina: " + String.format("%3s", stamina) + "   Health: " + String.format("%3s", health) + " |\n");
 				System.out.print("|                                           |\n");
+				if (borg > 0 && goodOrBad != "null") {
+					if (goodOrBad == "Good") {
+						System.out.println(testOutcomesGood[borg][0]);
+					}
+					if (goodOrBad == "Bad") {
+						System.out.println(testOutcomesBad[borg][0]);
+					}
+				} else {
+					System.out.print("|                                           |\n");
+				}
 				
 				//_______________Print Doors, Items Can Change Display, Ask for Player Input._______________
 				if (blind_eye == 0) {
@@ -103,19 +128,67 @@ class final_proj {
 				System.out.print("| Use 1, 2, or 3 to choose a door.          |\n");
 				System.out.print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ \n");
 				//Player Input
-				playerInput = input.nextInt();
+				playerInput = input.nextInt() - 1;
 			}
-			playerInput--;
 			stamina--;
 			
+//			Figure out which good or bad outcome happens.   <<-----
 			if (risk[playerInput] == "Low ") {
-				rand.randint( 0, 1) = 
+				borg = rand.nextInt(1) + 1;
 			}
 			if (risk[playerInput] == "Med ") {
-				
+				borg = rand.nextInt(2) + 1;
 			}
 			if (risk[playerInput] == "High") {
-				
+				borg = rand.nextInt(1) + 2;
+			}
+			
+//			Do we get something good or bad? <<-----
+			randomizer = rand.nextInt(100) + 1;
+			if ( randomizer < riskInt[playerInput]) {
+				goodOrBad = "Good";
+			} else {
+				goodOrBad = "Bad";
+			}
+			
+			if (goodOrBad == "Good") {
+				borg = borg * (rand.nextInt(2) + 1);
+			}
+			
+			if (goodOrBad == "Bad") {
+				borg = borg * (rand.nextInt(2)+1);
+			}
+			
+			// Apply new properties!
+			//Good
+			if (goodOrBad == "Good") {
+				if (testOutcomesGood[borg][1] == "health") {
+					health = health + Integer.parseInt(testOutcomesGood[borg][2]);
+				}
+				if (testOutcomesGood[borg][1] == "stamina") {
+					stamina = stamina + Integer.parseInt(testOutcomesGood[borg][2]);
+				}
+				if (testOutcomesGood[borg][1] == "money") {
+					money = money + Integer.parseInt(testOutcomesGood[borg][2]);
+				}
+			}
+			//Bad
+			if (goodOrBad == "Bad") {
+				if (testOutcomesBad[borg][1] == "health") {
+					health = health - Integer.parseInt(testOutcomesBad[borg][2]);
+				}
+				if (testOutcomesBad[borg][1] == "stamina") {
+					stamina = stamina - Integer.parseInt(testOutcomesBad[borg][2]);
+				}
+				if (testOutcomesBad[borg][1] == "money") {
+					money = money - Integer.parseInt(testOutcomesBad[borg][2]);
+				}
+			}
+			if (money < 0) {
+				money = 0;
+			}
+			if (health > 100) {
+				health = 100;
 			}
 		}
 	}
